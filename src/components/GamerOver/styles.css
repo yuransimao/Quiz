@@ -1,0 +1,29 @@
+.gamerOver{
+    text-align: center;
+    max-width: 500px;
+    border-radius:2rem;
+    background:#8435de;
+    padding:2rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.gamerOver h1,h2{
+    margin-bottom:2rem;
+} 
+.gamerOver p{
+    margin-bottom: 1rem;
+}
+
+
+
+.gamerOver button{
+    border:2px solid #FFF;
+}
+
+.gamerOver img{
+    height:200px;
+    margin:2rem;
+}
