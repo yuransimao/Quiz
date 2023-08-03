@@ -12,7 +12,7 @@
 html,body{
    min-height: 100vh;
    height: 100%;
-   background: #1c1c1c;
+   background: #0c0c0c;
 }
 
 img{
@@ -24,10 +24,10 @@ button{
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
-    padding: .8rem 1.5rem;
-    background: linear-gradient(90deg,rgba(132, 53, 222, 1) 0%, rgba(184,84,232, 1) 100%);
-    border-radius: 3rem;
+    padding: .8rem 3rem;
+    background: red;
+    border-radius: 2rem;
 }
 button:hover{
-    background: linear-gradient(90deg,rgba(184,84,232, 1) 0%, rgba(132, 53, 222, 1) 100%);
+    background: linear-gradient(90deg,rgb(230, 1, 1) 0%, rgb(222, 53, 53) 100%);
 }

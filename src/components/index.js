@@ -1,2 +1,0 @@
-export { Benvindo } from "./Benvindo";
-

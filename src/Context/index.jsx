@@ -1,11 +1,11 @@
-import { QuizContext } from "./context";
-import { initialState } from "./initialState";
+import { QuizContext } from "./QuizContexts";
+import { InitialState } from "./InitialState";
 import { useReducer } from "react";
-import { Reducer } from "./reducer";
+import { Reducer } from "./Reducer/reducer";
 
 export const QuizProvider = ({children}) => {
 
-    const value = useReducer(Reducer,initialState)
+    const value = useReducer(Reducer,InitialState)
     
   return (
     <QuizContext.Provider value={value}>

@@ -1,17 +1,21 @@
 
 import './App.css'
 import * as Components from "../Components"
-
+import { useContext } from 'react'
+import { QuizContext } from '../context/QuizContexts'
 
 function App() {
  
+  const [state, dispatch] = useContext(QuizContext)
 
  
 
   return (
     <div className='App'>
-     <h1>Quiz de Programação</h1>
-     <Components.Benvindo/>
+     
+     {state.GameStages === "Start" && <Components.Benvindo/>}
+     {state.GameStages === "Category" && <Components.Categorias/>}
+     {state.GameStages === "Playing" && <Components.Questions/>}
     </div>
   )
 }
