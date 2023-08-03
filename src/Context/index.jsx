@@ -9,7 +9,8 @@ const initialState = {
     gameSTAGES :STAGES[0],
     questions,
     currentQuestion:0,
-    score: 0
+    score: 0,
+    answerSelect : false
 }
 
 const QuizReducer = (state, action) =>{
@@ -41,7 +42,26 @@ const QuizReducer = (state, action) =>{
             return{
             ...state,
             currentQuestion: nextQuestion,
-            gameSTAGES : endGamer ? STAGES[2] : state.gameSTAGES
+            gameSTAGES : endGamer ? STAGES[2] : state.gameSTAGES,
+            answerSelect: false
+            }
+        }
+        
+        case "CHECK_ANSWERS":{
+            
+            if(state.answerSelect) return state
+
+            const answer =action.payload.answer
+            const opctionUser = action.payload.option
+            let correctAnswer= 0;
+
+            if(answer === opctionUser) correctAnswer = 1;
+            
+            return{
+            ...state,
+            score : state.score + correctAnswer,
+            answerSelect: opctionUser
+
             }
         }
         case "RENICIAR":{

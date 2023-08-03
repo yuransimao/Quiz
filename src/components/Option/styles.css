@@ -14,3 +14,13 @@
 .opction-container .opction p{
     margin-bottom:0;
 }
+
+.correct{
+    background:#0bfc03;
+    font-weight:bold;
+}
+
+.opction .wrong{
+    background:#3c0e70;
+    opacity:0.4;
+}
