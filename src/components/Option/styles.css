@@ -1,0 +1,16 @@
+.opction{
+    background:#3c0e70;
+    cursor:pointer;
+    border-radius:0.5rem;
+    padding:1rem;
+    margin-bottom:1rem;
+    opacity:0.8;
+    transition:0.4s;
+}
+.opction:hover{
+    opacity:1;
+}
+
+.opction-container .opction p{
+    margin-bottom:0;
+}

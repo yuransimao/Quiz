@@ -8,10 +8,10 @@ export const GamerOver = () =>{
     return (
         <div className="gamerOver">
             <h1>Fim de Jogo</h1>
-            <p>Pontuação</p>
-            <p>Pontuação y de z perguntas</p>
+            <p>Pontuação {quizState.score}</p>
+            <p>Você acertou {quizState.score}  á  {quizState.questions.length} perguntas.</p>
             <img src={welldone} alt="welldone"/>
-            <button>Reniciar</button>
+            <button onClick ={() => dispatch({type:"RENICIAR"})}>Reniciar</button>
         </div>
     )
 }
