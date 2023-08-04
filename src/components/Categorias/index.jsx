@@ -8,6 +8,7 @@ export const Categorias = () => {
 
     const HandleCategory = (category) =>{
        dispatch({type : Type.START_GAME, payload: category})
+       dispatch({type : Type.ALitorioQuestion})
         
     }  
     return (

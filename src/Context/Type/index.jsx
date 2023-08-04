@@ -1,2 +1,5 @@
 export const CHANGE_STAGES = "CHANGE_STAGES"
 export const START_GAME = "START_GAME"
+export const ALitorioQuestion = "ALitorioQuestion"
+export const NEXT_QUESTION = "NEXT_QUESTION"
+export const CORRECT_QUESTION = "CORRECT_QUESTION"

@@ -4,5 +4,8 @@ export const Stages = ["Start", "Category", "Playing", "End"]
 
 export const InitialState ={
     GameStages: Stages[0],
-    questions: data
+    questions: data,
+    CurrentQuestion: 0,
+    answerSelect: false,
+    correctAnswer:0
 }
