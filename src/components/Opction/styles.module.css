@@ -1,0 +1,46 @@
+.Opction, .correct{
+    background: rgb(136, 17, 17);
+   overflow: hidden;
+    margin-bottom: 1rem;
+    border-radius: .6rem;
+    display: flex;
+    align-items: center;
+    column-gap: 15rem;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    text-align: center;
+}
+
+.Opction  span{
+    text-align: left;
+    background: #1c1c1c;
+    padding: 1rem;
+    font-size: 1.6rem;
+}
+
+.Opction p{
+    
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    
+
+
+}
+
+.Opction:hover{
+    opacity: 1;
+}
+
+
+ .correct{
+    background: green;
+}
+
+
+
+
+.correct:hover{
+    opacity: 1;
+}

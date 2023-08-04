@@ -8,7 +8,8 @@ export const Questions = () => {
   const currentQuestions = state.questions[state.CurrentQuestion]
   
   const onSelectiOpction = (opction) => {
-    
+    console.log(currentQuestions.answer )
+
     dispatch({
       type: Types.CORRECT_QUESTION, 
       payload:{
@@ -20,14 +21,15 @@ export const Questions = () => {
   return (
     <div> 
       <h1>{currentQuestions.question}</h1>
+      <p>Perguntas de {state.CurrentQuestion +1} á {state.questions.length}</p>
       {currentQuestions.options.map((opction,index)=>(
         <Opction opction={opction} key={opction}
         position={index + 1}
-        answer={opction.answer}
+        answer={currentQuestions.answer}
         SelectiOpction = {() => onSelectiOpction(opction)}
         />
       ))}
-      <button onClick={() => dispatch({type: Types.NEXT_QUESTION})}>Continuar</button>
+      {state.AnswerSelects && <button onClick={() => dispatch({type: Types.NEXT_QUESTION})}>Continuar</button>}
     </div>
   )
 }

@@ -6,6 +6,6 @@ export const InitialState ={
     GameStages: Stages[0],
     questions: data,
     CurrentQuestion: 0,
-    answerSelect: false,
+    AnswerSelects: false,
     correctAnswer:0
 }

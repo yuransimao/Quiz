@@ -56,16 +56,20 @@ export const Reducer = (state, action) =>{
         }
 
         case Types.CORRECT_QUESTION:{
-            const answer = action.payload.answer
-            const option = action.payload.option
+
+            if(state.AnswerSelects) return state;
+
+            const answer = action.payload.answer;
+            const option = action.payload.opction;
+            
             let answerCorret =0;
             if(answer === option) answerCorret = 1;
             
-            console.log(answerCorret)
+            
             return{
                 ...state,
+                AnswerSelects : option,
                 correctAnswer: state.correctAnswer + answerCorret,
-                answerSelect : option
             }
         }
     }
