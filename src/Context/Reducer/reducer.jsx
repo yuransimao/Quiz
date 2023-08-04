@@ -37,7 +37,8 @@ export const Reducer = (state, action) =>{
             return{
                 ...state,
                 CurrentQuestion: QuestionNext,
-                GameStages : end ? Stages[3] : state.GameStages
+                GameStages : end ? Stages[3] : state.GameStages,
+                AnswerSelects: false
                 
 
             }
