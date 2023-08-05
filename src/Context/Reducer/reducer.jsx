@@ -29,7 +29,7 @@ export const Reducer = (state, action) =>{
         }
         
         case Types.NEXT_QUESTION:{
-            const QuestionNext = state.CurrentQuestion +1
+            const QuestionNext = state.CurrentQuestion++
             let end = false;
 
             if(!state.questions[QuestionNext]) end =true;
@@ -38,7 +38,8 @@ export const Reducer = (state, action) =>{
                 ...state,
                 CurrentQuestion: QuestionNext,
                 GameStages : end ? Stages[3] : state.GameStages,
-                AnswerSelects: false
+                AnswerSelects: false,
+                
                 
 
             }

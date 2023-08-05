@@ -20,14 +20,3 @@ img{
 }
 
 
-button{
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    padding: .8rem 3rem;
-    background: red;
-    border-radius: 2rem;
-}
-button:hover{
-    background: linear-gradient(90deg,rgb(230, 1, 1) 0%, rgb(222, 53, 53) 100%);
-}

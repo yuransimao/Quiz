@@ -7,5 +7,6 @@ export const InitialState ={
     questions: data,
     CurrentQuestion: 0,
     AnswerSelects: false,
-    correctAnswer:0
+    correctAnswer:0,
+    
 }

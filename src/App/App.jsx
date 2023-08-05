@@ -16,6 +16,7 @@ function App() {
      {state.GameStages === "Start" && <Components.Benvindo/>}
      {state.GameStages === "Category" && <Components.Categorias/>}
      {state.GameStages === "Playing" && <Components.Questions/>}
+     {state.GameStages === "End" && <Components.Fim/>}
     </div>
   )
 }

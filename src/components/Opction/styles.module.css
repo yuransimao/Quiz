@@ -39,7 +39,10 @@
 }
 
 
+.wrong{
+    background: red;
 
+}
 
 .correct:hover{
     opacity: 1;
