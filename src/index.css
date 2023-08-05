@@ -10,13 +10,14 @@
 }
 
 html,body{
+    
+    
    min-height: 100vh;
    height: 100%;
    background: #0c0c0c;
+   
 }
 
-img{
-    max-width: 100%;
-}
+
 
 

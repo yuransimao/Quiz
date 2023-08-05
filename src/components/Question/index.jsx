@@ -49,7 +49,6 @@ export const Questions = () => {
       dispatch({type: Types.SETTIMERENICIAR})
     }
    const Timeout =   setTimeout(counterTime,1000)
-   console.log(state.Countertime)
     return () =>    clearTimeout(Timeout)
     
   

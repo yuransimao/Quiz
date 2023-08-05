@@ -1,0 +1,31 @@
+.Wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.Benvindo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    
+}
+
+.Benvindo p{
+    font-size:1.2rem;
+    margin-bottom: 1rem;
+    color: #464646;
+}
+
+.Benvindo h1 > span{
+    color: rgb(96, 166, 187);
+    border-bottom: 2px solid rgb(196, 0, 0);
+}
+
+.Benvindo img{
+    max-width: 100%;
+}
