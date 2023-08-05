@@ -11,12 +11,12 @@
 }
 .Questions_text > .circle{
     position: absolute;
-    right: 7rem;
-    top:2rem;
+    right: 2rem;
+    top:1rem;
     text-align: center;
     background-color: rgb(31, 31, 36);
-    width: 10%;
-    height: 10%;
+    width: 9%;
+    height: 9%;
     padding: 1rem;
     display: flex;
     align-items: center;

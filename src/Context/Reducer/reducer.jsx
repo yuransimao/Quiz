@@ -1,5 +1,5 @@
 import * as Types from "../Type"
-import { Stages } from "../InitialState"
+import { InitialState, Stages } from "../InitialState"
 
 export const Reducer = (state, action) =>{
 
@@ -73,6 +73,10 @@ export const Reducer = (state, action) =>{
                 AnswerSelects : option,
                 correctAnswer: state.correctAnswer + answerCorret,
             }
+        }
+
+        case Types.RECOMECAR:{
+            return InitialState
         }
     }
 }

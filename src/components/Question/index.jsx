@@ -1,6 +1,6 @@
 
 import Styles from "./styles.module.css"
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { QuizContext } from '../../context/QuizContexts'
 import { Opction } from '../Opction'
 import { Button } from "../Button"
@@ -12,7 +12,7 @@ export const Questions = () => {
   const currentQuestions = state.questions[state.CurrentQuestion]
   const [opctionSelct, setOpctionSelect] = useState(null)
   const [isdisabled, setIsdisabled] = useState(null)
-
+  const [Counter, setCounter] = useState(0)
 
 
   const onSelectiOpction = (opction) => {
@@ -33,9 +33,28 @@ export const Questions = () => {
     
   }
 
+  const counterTime = () =>{
+    setCounter( s => s + 1 )
+
+    if(Counter === 30){
+      setCounter(0)
+    }
+  }
+  useEffect(() =>{
+
+
+   const Timeout =   setTimeout(counterTime,300)
+
+    return () =>    clearTimeout(Timeout)
+    
+  
+
+  },[Counter])
+
   console.log(state.Isdisabledopction)
   return (
     <div className={Styles.Questions}> 
+    <span>0 : {Counter}</span>
       <div className={Styles.Questions_text}>
         <h1>{currentQuestions.question}</h1>
         <div className={Styles.circle}>
@@ -53,13 +72,12 @@ export const Questions = () => {
         disabled={state.AnswerSelects ? isdisabled : false }
 
         CustomClass= {
-          ` ${Styles["Opction"]} ${opctionSelct === opction ? currentQuestions.answer === opction  ? Styles["correct"] : Styles["wrong"] : ""}   `
+          ` ${Styles["Opction"]} ${state.AnswerSelects && opctionSelct === opction ? currentQuestions.answer === opction  ? Styles["correct"] : Styles["wrong"] : ""}   `
         }
         />
 
       ))}
-      {state.AnswerSelects && <Button 
-      handleClick={() => dispatch({type: Types.NEXT_QUESTION})}
+      {state.AnswerSelects && <Button handleClick={() => dispatch({type: Types.NEXT_QUESTION})}
       text="Continuar"
       />}
     </div>
