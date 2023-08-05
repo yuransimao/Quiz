@@ -12,7 +12,7 @@ export const Questions = () => {
   const currentQuestions = state.questions[state.CurrentQuestion]
   const [opctionSelct, setOpctionSelect] = useState(null)
   const [isdisabled, setIsdisabled] = useState(null)
-  const [Counter, setCounter] = useState(0)
+  const [RestCounter, setRestCounter] = useState()
 
 
   const onSelectiOpction = (opction) => {
@@ -33,25 +33,25 @@ export const Questions = () => {
     
   }
 
+ 
   const counterTime = () =>{
-    setCounter( s => s + 1 )
-
-    if(Counter === 30){
-      setCounter(0)
-    }
+    setCounter( s => s - 1 )
   }
   useEffect(() =>{
 
-
-   const Timeout =   setTimeout(counterTime,300)
-
+    if(Counter === 0){
+      setCounter(state.Countertime)
+      dispatch({type: Types.SETTIMERENICIAR})
+    }
+   const Timeout =   setTimeout(counterTime,1000)
+   console.log(state.Countertime)
     return () =>    clearTimeout(Timeout)
     
   
 
-  },[Counter])
+  },[state.Countertime, Counter, dispatch])
 
-  console.log(state.Isdisabledopction)
+
   return (
     <div className={Styles.Questions}> 
     <span>0 : {Counter}</span>

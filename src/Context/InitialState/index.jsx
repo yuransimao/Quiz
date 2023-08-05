@@ -8,5 +8,5 @@ export const InitialState ={
     CurrentQuestion: 0,
     AnswerSelects: false,
     correctAnswer:0,
-    
+    Countertime :30   
 }

@@ -33,13 +33,13 @@ export const Reducer = (state, action) =>{
             let end = false;
 
             if(!state.questions[QuestionNext]) end =true;
-
+            
+            
             return{
                 ...state,
                 CurrentQuestion: QuestionNext,
                 GameStages : end ? Stages[3] : state.GameStages,
                 AnswerSelects: false,
-                
                 
 
             }
@@ -74,7 +74,12 @@ export const Reducer = (state, action) =>{
                 correctAnswer: state.correctAnswer + answerCorret,
             }
         }
-
+        case Types.SETTIMERENICIAR:{
+            return{
+                ...state,
+                GameStages : Stages[3]
+            }
+        }
         case Types.RECOMECAR:{
             return InitialState
         }
