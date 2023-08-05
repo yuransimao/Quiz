@@ -20,7 +20,10 @@
     margin-bottom: 1rem;
     color: #464646;
 }
-
+.Benvindo h1 {
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
 .Benvindo h1 > span{
     color: rgb(96, 166, 187);
     border-bottom: 2px solid rgb(196, 0, 0);
@@ -28,4 +31,25 @@
 
 .Benvindo img{
     max-width: 100%;
+}
+
+@media (max-width:768px){
+    
+.Benvindo{
+        
+        width: 70%;
+    }
+}
+@media (max-width:500px){
+      
+    
+.Benvindo{
+        
+        width: 100%;
+    }
+
+.Benvindo img{
+        max-width:  80%;
+    }
+    
 }

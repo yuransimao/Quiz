@@ -57,8 +57,10 @@ export const Questions = () => {
 
 
   return (
+    <div className={Styles.Wrapper}> 
+
     <div className={Styles.Questions}> 
-    <span>0 : {Counter}</span>
+    <span className={Styles.Cronometro}>0 : {Counter}</span>
       <div className={Styles.Questions_text}>
         <h1>{currentQuestions.question}</h1>
         <div className={Styles.circle}>
@@ -81,9 +83,12 @@ export const Questions = () => {
         />
 
       ))}
-      {state.AnswerSelects && <Button handleClick={() => {dispatch({type: Types.NEXT_QUESTION}); RestCounter()}}
-      text="Continuar"
-      />}
+      <div className={Styles.Btn}>
+        {state.AnswerSelects && <Button handleClick={() => {dispatch({type: Types.NEXT_QUESTION}); RestCounter()}}
+        text="Continuar"
+        />}
+      </div>
+    </div>
     </div>
   )
 }

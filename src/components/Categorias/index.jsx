@@ -16,9 +16,11 @@ export const Categorias = () => {
     return (
    <div className={Styles.Wrapper}>
    <div  className={Styles.category}>
-        <h1>Selecione uma Categoria</h1>
+        <h1>Selecione uma  <span>Categoria</span></h1>
+        <p>Escolhe uma categorias que maisgostas</p>
        <div className={Styles.container_category}>{state.questions.map((questions)=>(
              <Button handleClick={() => HandleCategory(questions.category)} key={questions.category}
+             
              text ={questions. category}
              />
        ))}

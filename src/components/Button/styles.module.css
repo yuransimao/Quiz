@@ -9,3 +9,14 @@
 .Button:hover{
     background: linear-gradient(90deg,rgb(230, 1, 1) 0%, rgb(222, 53, 53) 100%);
 }
+
+@media (max-width:768px) {
+    .Button{
+        padding: .8rem 2rem;
+    }
+}
+@media (max-width:500px) {
+    .Button{
+        padding: .8rem 1rem;
+    }
+}
