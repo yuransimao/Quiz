@@ -12,7 +12,8 @@ export const Questions = () => {
   const currentQuestions = state.questions[state.CurrentQuestion]
   const [opctionSelct, setOpctionSelect] = useState(null)
   const [isdisabled, setIsdisabled] = useState(null)
-  const [RestCounter, setRestCounter] = useState()
+  const [Counter, setCounter] = useState(state.Countertime)
+  
 
 
   const onSelectiOpction = (opction) => {
@@ -36,6 +37,10 @@ export const Questions = () => {
  
   const counterTime = () =>{
     setCounter( s => s - 1 )
+  }
+
+  const RestCounter =() =>{
+    setCounter(state.Countertime)
   }
   useEffect(() =>{
 
@@ -77,7 +82,7 @@ export const Questions = () => {
         />
 
       ))}
-      {state.AnswerSelects && <Button handleClick={() => dispatch({type: Types.NEXT_QUESTION})}
+      {state.AnswerSelects && <Button handleClick={() => {dispatch({type: Types.NEXT_QUESTION}); RestCounter()}}
       text="Continuar"
       />}
     </div>
