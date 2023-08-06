@@ -1,6 +1,6 @@
 
 import './App.css'
-import  {Benvindo, Categorias, Fim, Questions,}from "../Components"
+import  {Benvindo, Categorias, Fim, Questions,}from "../Component"
 import { useContext } from 'react'
 import { QuizContext } from '../Contexts/Quiz/QuizContexts'
 
