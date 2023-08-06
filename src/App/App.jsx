@@ -6,7 +6,7 @@ import { QuizContext } from '../Contexts/Quiz/QuizContexts'
 
 function App() {
  
-  const [state, dispatch] = useContext(QuizContext)
+  const [state] = useContext(QuizContext)
 
  
 
