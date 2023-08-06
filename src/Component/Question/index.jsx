@@ -38,9 +38,13 @@ export const Questions = () => {
   const counterTime = () =>{
     setCounter( s => s - 1 )
   }
+ 
 
-  const RestCounter =() =>{
+  const ClickHandle = () =>{
+    dispatch({type: Types.NEXT_QUESTION}); 
+    
     setCounter(state.Countertime)
+
   }
   useEffect(() =>{
 
@@ -84,7 +88,7 @@ export const Questions = () => {
 
       ))}
       <div className={Styles.Btns}>
-        {state.AnswerSelects && <Button handleClick={() => {dispatch({type: Types.NEXT_QUESTION}); RestCounter()}}
+        {state.AnswerSelects && <Button handleClick={ClickHandle }
         text="Continuar"
         />}
       </div>
