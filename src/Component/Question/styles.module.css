@@ -38,15 +38,18 @@
 .circle > p{
     text-align: center;
     font-size: 1.2rem;
-    padding: 1.5rem;
+    padding: 1.2rem;
 }
 
 .Cronometro{
-    color: red;
+    color: #fff;
     font-size: 1.3rem;
     clip-path: circle();
     padding: 1rem;
     background: #464646;
+    position: absolute;
+    top:1rem;
+    left:2rem ;
 }
 .Opction, .correct{
     background: rgb(136, 17, 17);
@@ -99,6 +102,12 @@ overflow: hidden;
 
 }
 
+.Btns{
+    
+    position: absolute;
+    bottom: 3rem;
+    padding:1rem 0;
+}
 .correct:hover{
     opacity: 1;
 }

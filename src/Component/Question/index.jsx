@@ -41,8 +41,8 @@ export const Questions = () => {
  
 
   const ClickHandle = () =>{
-    dispatch({type: Types.NEXT_QUESTION}); 
     setCounter(state.Countertime)
+    dispatch({type: Types.NEXT_QUESTION}) 
 
   }
   useEffect(() =>{
