@@ -1,6 +1,6 @@
 
 import './App.css'
-import * as Components from "../Components"
+import  {Benvindo, Categorias, Fim, Questions,}from "../Components"
 import { useContext } from 'react'
 import { QuizContext } from '../Contexts/Quiz/QuizContexts'
 
@@ -13,10 +13,11 @@ function App() {
   return (
     <div className='App'>
      
-     {state.GameStages === "Start" && <Components.Benvindo/>}
-     {state.GameStages === "Category" && <Components.Categorias/>}
-     {state.GameStages === "Playing" && <Components.Questions/>}
-     {state.GameStages === "End" && <Components.Fim/>}
+     {state.GameStages === "Start" && <Benvindo/>}
+     {state.GameStages === "Category" && <Categorias/>}
+     {state.GameStages === "Playing" && <Questions/>}
+     {state.GameStages === "End" && <Fim/>}
+
     </div>
   )
 }
