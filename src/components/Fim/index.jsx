@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { QuizContext } from '../../context/QuizContexts'
+import { QuizContext } from '../../Contexts/Quiz/QuizContexts'
 import { Button } from '../Button'
-import * as Types from '../../context/Type'
+import * as Types from '../../Contexts/Type'
 import Styles from "./styles.module.css"
 import Bye from "../../img/Bye.svg"
 

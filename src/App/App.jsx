@@ -2,7 +2,7 @@
 import './App.css'
 import * as Components from "../Components"
 import { useContext } from 'react'
-import { QuizContext } from '../context/QuizContexts'
+import { QuizContext } from '../Contexts/Quiz/QuizContexts'
 
 function App() {
  

@@ -1,4 +1,4 @@
-import { QuizContext } from "./QuizContexts";
+import { QuizContext } from "./Quiz/QuizContexts";
 import { InitialState } from "./InitialState";
 import { useReducer } from "react";
 import { Reducer } from "./Reducer/reducer";

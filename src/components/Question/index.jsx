@@ -1,10 +1,10 @@
 
 import Styles from "./styles.module.css"
 import { useContext, useEffect, useState } from 'react'
-import { QuizContext } from '../../context/QuizContexts'
+import { QuizContext } from '../../Contexts/Quiz/QuizContexts'
 import { Opction } from '../Opction'
 import { Button } from "../Button"
-import * as Types  from '../../context/Type'
+import * as Types  from '../../Contexts/Type'
 
 export const Questions = () => {
   

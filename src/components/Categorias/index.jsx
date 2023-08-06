@@ -1,8 +1,8 @@
 import  { useContext } from 'react'
-import { QuizContext } from '../../context/QuizContexts'
+import { QuizContext } from '../../Contexts/Quiz/QuizContexts'
 import { Button } from '../Button'
 import Category from "../../img/Choose-rafiki.svg"
-import * as Type from '../../context/Type'
+import * as Type from '../../Contexts/Type'
 import Styles from "./styles.module.css"
 
 export const Categorias = () => {

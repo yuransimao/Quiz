@@ -1,8 +1,8 @@
 import Styles from "./styles.module.css"
 import { useContext } from 'react'
-import { QuizContext } from '../../context/QuizContexts'
+import { QuizContext } from '../../Contexts/Quiz/QuizContexts'
 import { Button } from '../Button'
-import * as Type from '../../context/Type'
+import * as Type from '../../Contexts/Type'
 import quizshow from "../../img/quizshow-rafiki.svg"
 
 export const Benvindo = () => {
