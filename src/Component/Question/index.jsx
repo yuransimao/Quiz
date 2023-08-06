@@ -42,7 +42,6 @@ export const Questions = () => {
 
   const ClickHandle = () =>{
     dispatch({type: Types.NEXT_QUESTION}); 
-    
     setCounter(state.Countertime)
 
   }
@@ -88,7 +87,7 @@ export const Questions = () => {
 
       ))}
       <div className={Styles.Btns}>
-        {state.AnswerSelects && <Button handleClick={ClickHandle }
+        {state.AnswerSelects && <Button handleClick={ () => ClickHandle() }
         text="Continuar"
         />}
       </div>
