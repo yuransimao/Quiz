@@ -83,7 +83,7 @@ export const Questions = () => {
         />
 
       ))}
-      <div className={Styles.Btn}>
+      <div className={Styles.Btns}>
         {state.AnswerSelects && <Button handleClick={() => {dispatch({type: Types.NEXT_QUESTION}); RestCounter()}}
         text="Continuar"
         />}
