@@ -1,4 +1,4 @@
-import data from "../../data/questions_complete"
+import {data} from "../../data/questions_complete"
 
 export const Stages = ["Start", "Category", "Playing", "End"]
 
